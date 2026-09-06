@@ -1,0 +1,185 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="searchBoxBackground">@color/search_box_background</item>
+        <item name="textAppearanceLargePopupMenu">@style/AppTheme.TextAppearance.Popup</item>
+        <item name="actionOverflowMenuStyle">@style/DarqOverflowMenu</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/ic_menu_switch</item>
+        <item name="colorPrimaryContainer">@color/accent</item>
+        <item name="colorOnPrimaryContainer">#FFFFFF</item>
+        <item name="colorSurfaceVariant">#2C313A</item>
+        <item name="colorOnSurfaceVariant">#9AA0A6</item>
+        <item name="colorOutline">#5F6368</item>
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.Darq.TimePicker.DisplayLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Darq.TimePicker.HeadlineMedium</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Darq.TimePicker.TitleMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Darq.TimePicker.BodySmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Darq.TimePicker.BodyLarge</item>
+        <item name="materialTimePickerTheme">@style/ThemeOverlay.Darq.TimePicker</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Darq.Dialog</item>
+    </style>
+
+    <style name="ThemeOverlay.Darq.TimePicker" parent="ThemeOverlay.Material3.MaterialTimePicker">
+        <item name="android:dialogCornerRadius">28dp</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Darq.Dialog</item>
+        <item name="colorPrimaryContainer">#004D73</item>
+        <item name="colorOnPrimaryContainer">#C2E7FF</item>
+        <item name="colorSurface">#1F242C</item>
+        <item name="colorOnSurface">#E2E2E6</item>
+        <item name="colorSurfaceVariant">#2A303A</item>
+        <item name="colorOnSurfaceVariant">#C4C6D0</item>
+        <item name="colorOutline">#7FCFFF</item>
+        <item name="colorPrimary">#7FCFFF</item>
+        <item name="colorOnPrimary">#00325B</item>
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.Darq.TimePicker.DisplayLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Darq.TimePicker.HeadlineMedium</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Darq.TimePicker.TitleMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Darq.TimePicker.BodySmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Darq.TimePicker.BodyLarge</item>
+    </style>
+
+    <style name="TextAppearance.Darq.TimePicker.DisplayLarge" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">56dp</item>
+        <item name="android:fontFamily">@font/google_sans_text_medium</item>
+    </style>
+
+    <style name="TextAppearance.Darq.TimePicker.HeadlineMedium" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/google_sans_text_medium</item>
+    </style>
+
+    <style name="TextAppearance.Darq.TimePicker.TitleMedium" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/google_sans_text_medium</item>
+    </style>
+
+    <style name="TextAppearance.Darq.TimePicker.BodySmall" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/google_sans_text</item>
+    </style>
+
+    <style name="TextAppearance.Darq.TimePicker.BodyLarge" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/google_sans_text</item>
+    </style>
+
+    <style name="ThemeOverlay.Darq.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">#E1E2EC</item>
+        <item name="colorPrimary">@color/accent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Darq.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.Darq.Dialog" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Small.Darq" parent="TextAppearance.AppCompat.Small">
+        <item name="android:fontFamily">@font/google_sans_text</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Small.Darq.Medium" parent="TextAppearance.AppCompat.Small">
+        <item name="android:fontFamily">@font/google_sans_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Medium.Darq" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/google_sans_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Large.Darq" parent="TextAppearance.AppCompat.Large">
+        <item name="android:fontFamily">@font/google_sans_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Large.Darq.Lighter" parent="TextAppearance.AppCompat.Large.Darq">
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog.Dark" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet.Dark</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">@color/toolbar_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_rounded_bg</item>
+    </style>
+
+    <style name="BottomSheet.Dark" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_rounded_bg_dark</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.Popup" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="fontFamily">@font/google_sans_text</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="DarqOverflowMenu" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/background_menu</item>
+    </style>
+
+    <style name="DarqPopupMenuTheme" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="android:listChoiceIndicatorMultiple">@drawable/ic_menu_switch</item>
+        <item name="android:popupBackground">@drawable/background_menu</item>
+        <item name="android:listPreferredItemHeightSmall">44dp</item>
+    </style>
+
+    <style name="AppTheme.ThirdPartyLicences" parent="Theme.MaterialComponents.DayNight">
+        <item name="actionBarStyle">@style/ThirdPartyLicencesToolbarTheme</item>
+        <item name="android:statusBarColor">?android:windowBackground</item>
+        <item name="android:windowLightStatusBar">@bool/lightStatusNav</item>
+        <item name="android:textViewStyle">@style/ThirdPartyLicencesTextViewStyle</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowAnimationStyle">@style/ThirdPartyLicencesActivityAnimation</item>
+    </style>
+
+    <style name="ThirdPartyLicencesActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="ThirdPartyLicencesToolbarTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">?android:windowBackground</item>
+        <item name="titleTextStyle">@style/ThirdPartyLicencesToolbarTitleStyle</item>
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+    </style>
+
+    <style name="ThirdPartyLicencesToolbarTitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/google_sans_text_medium</item>
+    </style>
+
+    <style name="ThirdPartyLicencesTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_text</item>
+    </style>
+
+</resources>

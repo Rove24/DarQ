@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.kieronquinn.app.darq">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+	<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+		tools:ignore="QueryAllPackagesPermission" />
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+	<application
+		android:name=".DarqApplication"
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:roundIcon="@mipmap/ic_launcher"
+		android:description="@string/xposed_desc"
+		android:supportsRtl="true"
+		tools:ignore="GoogleAppIndexingWarning">
+
+		<activity
+			android:name="com.kieronquinn.app.darq.ui.activities.DarqActivity"
+			android:theme="@style/AppTheme"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity
+			android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+			android:theme="@style/AppTheme.ThirdPartyLicences" />
+		<activity
+			android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+			android:theme="@style/AppTheme.ThirdPartyLicences" />
+
+		<service android:name="com.kieronquinn.app.darq.service.boot.BootForegroundService"/>
+		<service android:name="com.kieronquinn.app.darq.service.autodark.DarqAutoDarkForegroundService"/>
+
+		<receiver android:name="com.kieronquinn.app.darq.receivers.BootReceiver"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+			</intent-filter>
+		</receiver>
+
+		<provider
+			android:name="rikka.shizuku.ShizukuProvider"
+			android:authorities="${applicationId}.shizuku"
+			android:multiprocess="false"
+			android:enabled="true"
+			android:exported="true"
+			android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+		<provider
+			android:name="androidx.core.content.FileProvider"
+			android:authorities="${applicationId}.provider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"/>
+		</provider>
+
+		<meta-data
+			android:name="xposedmodule"
+			android:value="true" />
+		<meta-data
+			android:name="xposeddescription"
+			android:value="@string/xposed_desc" />
+		<meta-data
+			android:name="xposedminversion"
+			android:value="102" />
+
+	</application>
+
+</manifest>

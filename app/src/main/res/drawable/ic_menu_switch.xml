@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="11dp"/>
+                    <size android:width="36dp" android:height="22dp"/>
+                    <solid android:color="@color/switch_track_checked"/>
+                </shape>
+            </item>
+            <item
+                android:left="17dp"
+                android:top="3dp"
+                android:right="3dp"
+                android:bottom="3dp">
+                <shape android:shape="oval">
+                    <size android:width="16dp" android:height="16dp"/>
+                    <solid android:color="@color/switch_thumb_checked"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="11dp"/>
+                    <size android:width="36dp" android:height="22dp"/>
+                    <stroke android:width="1.5dp" android:color="@color/switch_track_stroke"/>
+                    <solid android:color="@color/switch_track_unchecked"/>
+                </shape>
+            </item>
+            <item
+                android:left="4dp"
+                android:top="5dp"
+                android:right="20dp"
+                android:bottom="5dp">
+                <shape android:shape="oval">
+                    <size android:width="12dp" android:height="12dp"/>
+                    <solid android:color="@color/switch_thumb_unchecked"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

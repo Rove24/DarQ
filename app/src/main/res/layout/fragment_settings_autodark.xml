@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:transitionGroup="true">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Master Switch Card -->
+        <LinearLayout
+            android:id="@+id/card_master_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16"
+            android:layout_marginTop="@dimen/padding_16"
+            android:layout_marginEnd="@dimen/padding_16"
+            android:layout_marginBottom="@dimen/padding_16"
+            android:background="@drawable/bg_group_card_single"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="68dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_16"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_master_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/google_sans_text_medium"
+                    android:text="@string/auto_dark_master_switch_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_master_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/google_sans_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="13sp"
+                    tools:text="@string/auto_dark_status_enabled" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:showText="false"
+                android:thumb="@drawable/md3_switch_thumb"
+                app:switchMinWidth="52dp"
+                app:track="@drawable/md3_switch_track" />
+
+        </LinearLayout>
+
+        <!-- Section Header -->
+        <TextView
+            android:id="@+id/header_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/google_sans_text_medium"
+            android:text="@string/auto_dark_schedule_header"
+            android:textColor="@color/category_header_text"
+            android:textSize="14sp" />
+
+        <!-- Schedule Options Group -->
+        <LinearLayout
+            android:id="@+id/layout_schedule_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <!-- Sunset/Sunrise Option -->
+            <LinearLayout
+                android:id="@+id/card_sunset_sunrise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_16"
+                android:layout_marginEnd="@dimen/padding_16"
+                android:background="@drawable/bg_group_card_top"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="64dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="12dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_sunset_sunrise_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_schedule_sunset_sunrise_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_sunset_sunrise_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_schedule_sunset_sunrise_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_sunset_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:showText="false"
+                    android:thumb="@drawable/md3_switch_thumb"
+                    app:switchMinWidth="52dp"
+                    app:track="@drawable/md3_switch_track" />
+
+            </LinearLayout>
+
+            <!-- Custom Time Option -->
+            <LinearLayout
+                android:id="@+id/card_custom_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_16"
+                android:layout_marginEnd="@dimen/padding_16"
+                android:background="@drawable/bg_group_card_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="64dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="12dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_custom_time_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_schedule_custom_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_custom_time_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_schedule_custom_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_custom_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:showText="false"
+                    android:thumb="@drawable/md3_switch_thumb"
+                    app:switchMinWidth="52dp"
+                    app:track="@drawable/md3_switch_track" />
+
+            </LinearLayout>
+
+            <!-- Custom Time Picker Rows -->
+            <LinearLayout
+                android:id="@+id/layout_custom_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!-- Start Time Card -->
+                <LinearLayout
+                    android:id="@+id/card_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:background="@drawable/bg_group_card_middle"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_16"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="@dimen/padding_16"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_custom_start_time"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_start_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text_medium"
+                        android:textColor="@color/category_header_text"
+                        android:textSize="16sp"
+                        tools:text="22:00" />
+
+                </LinearLayout>
+
+                <!-- End Time Card -->
+                <LinearLayout
+                    android:id="@+id/card_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:background="@drawable/bg_group_card_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/padding_16"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="@dimen/padding_16"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/auto_dark_custom_end_time"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_end_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text_medium"
+                        android:textColor="@color/category_header_text"
+                        android:textSize="16sp"
+                        tools:text="07:00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

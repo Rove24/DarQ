@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_switch_container"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?selectableItemBackgroundBorderless">
+
+    <TextView
+        android:id="@+id/menu_switch_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_app_picker_show_non_launchable_apps"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="160dp"
+        android:layout_marginEnd="8dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/menu_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        app:track="@drawable/md3_switch_track"
+        android:thumb="@drawable/md3_switch_thumb"
+        app:switchMinWidth="52dp"
+        app:showText="false"
+        android:background="@null" />
+
+</LinearLayout>

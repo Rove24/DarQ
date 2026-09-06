@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:transitionGroup="true">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16"
+            android:layout_marginTop="@dimen/padding_16"
+            android:layout_marginEnd="@dimen/padding_16"
+            android:orientation="vertical">
+
+            <!-- Backup Card -->
+            <LinearLayout
+                android:id="@+id/card_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_group_card_top"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="68dp"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/icon_backup"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_backup"
+                    app:tint="?android:textColorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_8"
+                    android:paddingBottom="@dimen/padding_8">
+
+                    <TextView
+                        android:id="@+id/text_backup_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text_medium"
+                        android:text="@string/data_settings_backup_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_backup_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/data_settings_backup_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Restore Card -->
+            <LinearLayout
+                android:id="@+id/card_restore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_group_card_middle"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="68dp"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/icon_restore"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_restore"
+                    app:tint="?android:textColorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_8"
+                    android:paddingBottom="@dimen/padding_8">
+
+                    <TextView
+                        android:id="@+id/text_restore_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text_medium"
+                        android:text="@string/data_settings_restore_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_restore_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/data_settings_restore_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Clear Card -->
+            <LinearLayout
+                android:id="@+id/card_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_group_card_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="68dp"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/icon_clear"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_clear"
+                    app:tint="?android:textColorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="@dimen/padding_16"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_8"
+                    android:paddingBottom="@dimen/padding_8">
+
+                    <TextView
+                        android:id="@+id/text_clear_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_text_medium"
+                        android:text="@string/data_settings_clear_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Darq"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_clear_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/google_sans_text"
+                        android:text="@string/data_settings_clear_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small.Darq"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
