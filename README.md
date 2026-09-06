@@ -14,6 +14,7 @@ Refactored with **Material Design 3**, seamlessly supporting **LSPosed (Xposed) 
 [中文说明 (README-CN.md)](./README-CN.md)
 
 ---
+<img width="8192" height="4510" alt="IMG_20260907_052102" src="https://github.com/user-attachments/assets/752d05c7-a10e-4fd1-9299-845bfa32e937" />
 
 ## ✨ Features
 
