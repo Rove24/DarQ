@@ -6,7 +6,7 @@ plugins {
     id 'com.google.android.gms.oss-licenses-plugin'
 }
 
-def tagName = '1.4'
+def tagName = '1.5'
 
 android {
     compileSdkVersion 32
@@ -14,7 +14,7 @@ android {
         applicationId "com.github.rove24.darq"
         minSdkVersion 29
         targetSdkVersion 32
-        versionCode 14
+        versionCode 15
         versionName tagName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "TAG_NAME", "\"${tagName}\"")

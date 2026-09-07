@@ -117,6 +117,9 @@ class ContainerSharedViewModelImpl(context: Context, private val serviceProvider
 
     override fun loadService() {
         viewModelScope.launch {
+            if (serviceProvider.isServiceConnected() && _loadingState.value is ServiceState.Loaded) {
+                return@launch
+            }
             _loadingState.emit(ServiceState.Loading)
         }
     }

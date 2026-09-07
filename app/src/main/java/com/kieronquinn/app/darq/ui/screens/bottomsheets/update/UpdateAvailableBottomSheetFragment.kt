@@ -1,7 +1,7 @@
 package com.kieronquinn.app.darq.ui.screens.bottomsheets.update
 
+import android.app.Dialog
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kieronquinn.app.darq.R
 import com.kieronquinn.app.darq.ui.base.BaseBottomSheetDialogFragment
 import com.kieronquinn.app.darq.ui.screens.container.ContainerSharedViewModel
@@ -9,6 +9,8 @@ import com.kieronquinn.app.darq.utils.openLink
 import com.kieronquinn.app.darq.utils.extensions.navGraphViewModel
 
 class UpdateAvailableBottomSheetFragment: BaseBottomSheetDialogFragment() {
+
+    override val iconRes = R.drawable.ic_notification
 
     private val sharedViewModel by navGraphViewModel<ContainerSharedViewModel>(R.id.nav_graph_main)
 
@@ -38,19 +40,19 @@ class UpdateAvailableBottomSheetFragment: BaseBottomSheetDialogFragment() {
         getString(R.string.bottom_sheet_update_available_neutral)
     }
 
-    override fun onNegativeClicked(dialog: BottomSheetDialog) {
+    override fun onNegativeClicked(dialog: Dialog) {
         sharedViewModel.clearUpdate()
         super.onNegativeClicked(dialog)
     }
 
-    override fun onPositiveClicked(dialog: BottomSheetDialog) {
+    override fun onPositiveClicked(dialog: Dialog) {
         dismiss()
         lifecycleScope.launchWhenResumed {
             navigation.navigate(UpdateAvailableBottomSheetFragmentDirections.actionUpdateAvailableBottomSheetFragmentToUpdateDownloadBottomSheetFragment())
         }
     }
 
-    override fun onNeutralClicked(dialog: BottomSheetDialog) {
+    override fun onNeutralClicked(dialog: Dialog) {
         update?.releaseUrl?.let {
             requireContext().openLink(it)
         }

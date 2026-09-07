@@ -1,15 +1,17 @@
 package com.kieronquinn.app.darq.ui.screens.bottomsheets.errors
 
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kieronquinn.app.darq.R
 import com.kieronquinn.app.darq.model.shizuku.ShizukuConstants
 import com.kieronquinn.app.darq.ui.base.BaseBottomSheetDialogFragment
 
 class ShizukuNotInstalledBottomSheetFragment: BaseBottomSheetDialogFragment() {
+
+    override val iconRes = R.drawable.ic_developer_options_kill
 
     override val title by lazy {
         getString(R.string.bottom_sheet_shizuku_not_installed_title)
@@ -33,16 +35,16 @@ class ShizukuNotInstalledBottomSheetFragment: BaseBottomSheetDialogFragment() {
 
     override val cancelable = false
 
-    override fun onPositiveClicked(dialog: BottomSheetDialog) {
+    override fun onPositiveClicked(dialog: Dialog) {
         openShizukuPlayStore()
     }
 
-    override fun onNegativeClicked(dialog: BottomSheetDialog) {
+    override fun onNegativeClicked(dialog: Dialog) {
         super.onNegativeClicked(dialog)
         requireActivity().finish()
     }
 
-    override fun onNeutralClicked(dialog: BottomSheetDialog) {
+    override fun onNeutralClicked(dialog: Dialog) {
         lifecycleScope.launchWhenResumed {
             navigation.navigate(R.id.action_global_shizukuInfoBottomSheetFragment)
         }

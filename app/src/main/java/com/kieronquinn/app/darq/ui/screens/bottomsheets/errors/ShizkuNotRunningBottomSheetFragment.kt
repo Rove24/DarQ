@@ -1,11 +1,13 @@
 package com.kieronquinn.app.darq.ui.screens.bottomsheets.errors
 
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import android.app.Dialog
 import com.kieronquinn.app.darq.R
 import com.kieronquinn.app.darq.model.shizuku.ShizukuConstants
 import com.kieronquinn.app.darq.ui.base.BaseBottomSheetDialogFragment
 
 class ShizkuNotRunningBottomSheetFragment: BaseBottomSheetDialogFragment() {
+
+    override val iconRes = R.drawable.ic_developer_options_kill
 
     override val title by lazy {
         getString(R.string.bottom_sheet_shizuku_not_running_title)
@@ -25,13 +27,13 @@ class ShizkuNotRunningBottomSheetFragment: BaseBottomSheetDialogFragment() {
 
     override val cancelable = false
 
-    override fun onPositiveClicked(dialog: BottomSheetDialog) {
+    override fun onPositiveClicked(dialog: Dialog) {
         super.onPositiveClicked(dialog)
         val packageManager = requireContext().packageManager
         startActivity(packageManager.getLaunchIntentForPackage(ShizukuConstants.SHIZUKU_PACKAGE_NAME))
     }
 
-    override fun onNegativeClicked(dialog: BottomSheetDialog) {
+    override fun onNegativeClicked(dialog: Dialog) {
         super.onNegativeClicked(dialog)
         requireActivity().finish()
     }

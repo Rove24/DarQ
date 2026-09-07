@@ -5,6 +5,8 @@ import com.kieronquinn.app.darq.ui.base.BaseBottomSheetDialogFragment
 
 class ShizukuInfoBottomSheetFragment: BaseBottomSheetDialogFragment() {
 
+    override val iconRes = R.drawable.ic_faq
+
     override val title by lazy {
         getString(R.string.bottom_sheet_shizuku_more_info_title)
     }
